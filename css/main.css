@@ -1,0 +1,98 @@
+/**
+ * 1. Avoid the IE 10-11 `min-height` bug.
+ * 2. Set `flex-shrink` to `0` to prevent some browsers from
+ *    letting these items shrink to smaller than their content's default
+ *    minimum size. See http://bit.ly/1Mn35US for details.
+ * 3. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
+ */
+
+
+:root {
+  --space: 1em;
+  --space-lg: 1em;
+}
+
+body {
+    background-color: #efe5e3;
+}
+
+.HolyGrail {
+  display: flex;
+  height: 100%; /* 1, 3 */
+  flex-direction: column;
+  margin: 0;
+}
+
+.HolyGrail-header,
+.HolyGrail-footer {
+  flex: none; /* 2 */
+}
+
+.HolyGrail-body {
+  display: flex;
+  flex: 1 0 auto; /* 2 */
+  flex-direction: column;
+  padding: var(--space);
+}
+
+.HolyGrail-content {
+  margin-top: var(--space);
+}
+
+.HolyGrail-nav {
+  order: -1;
+}
+
+.HolyGrail-nav,
+.HolyGrail-ads {
+  padding: 1em;
+  border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+  .HolyGrail-body {
+    flex-direction: row;
+  }
+  .HolyGrail-content {
+    flex: 1;
+    padding: var(--space-lg);
+    margin: 0;
+  }
+  .HolyGrail-nav, .HolyGrail-ads {
+    flex: 0 0 8em;
+  }
+}
+
+
+.button {
+    background-color: #dbc746;
+    color: black;
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #ad9d37;
+    cursor: pointer;
+}
+
+header {
+    font-size: 3em;
+    line-height: 3em;
+    padding: 0 2em;
+    border-bottom: 1px solid black;
+}
+
+footer {
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+    padding: 1em 3em;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
