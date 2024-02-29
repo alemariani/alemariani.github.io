@@ -16,7 +16,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: #828282;
-  background: #fff;
+  background: #fefff2;
 }
 
 #page {
@@ -403,7 +403,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-counter .event-wrap,
 #fh5co-event .event-wrap {
   border: 2px solid rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
   padding: 30px;
   width: 100%;
   float: left;
@@ -420,7 +420,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-counter .event-wrap h3,
 #fh5co-event .event-wrap h3 {
-  font-size: 20px;
+  font-size: 24px;
   color: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   display: block;
@@ -437,7 +437,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-counter .event-wrap i,
 #fh5co-event .event-wrap i {
   color: white;
-  font-size: 20px;
+  font-size: 28px;
 }
 #fh5co-counter .event-wrap .event-col,
 #fh5co-event .event-wrap .event-col {
@@ -1033,7 +1033,7 @@ form label {
 }
 
 .couple-wrap {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
