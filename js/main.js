@@ -215,24 +215,49 @@
 
 	// Init Counter
 	var initCounter = function() {
-		var d = new Date(2024, 4, 31, 15, 0);
+		let w, ws, d, ds, h, hs, m, ms, s, ss;
+		if (document.documentElement.lang == 'it') {
+			w = 'settimana';
+			ws = 'settimane';
+			d = 'giorno';
+			ds = 'giorni';
+			h = 'ora';
+			hs = 'ore';
+			m = 'minuto';
+			ms = 'minuti';
+			s = 'secondo';
+			ss = 'secondi';
+		}
+		if (document.documentElement.lang == 'pt-BR') {
+			w = 'semana';
+			ws = 'semanas';
+			d = 'dia';
+			ds = 'dias';
+			h = 'hora';
+			hs = 'horas';
+			m = 'minuto';
+			ms = 'minutos';
+			s = 'segundo';
+			ss = 'segundos';
+		}
+		var date = new Date(2024, 4, 31, 15, 0);
 		simplyCountdown('.simply-countdown-one', {
-			year: d.getFullYear(),
-			month: d.getMonth() + 1,
-			day: d.getDate(),
-			hours: d.getHours(),
-			minutes: d.getMinutes(),
+			year: date.getFullYear(),
+			month: date.getMonth() + 1,
+			day: date.getDate(),
+			hours: date.getHours(),
+			minutes: date.getMinutes(),
 			words: {
-				week: 'settimana',
-				weeks: 'settimane',
-				day: 'giorno',
-				days: 'giorni',
-				hour: 'ora',
-				hours: 'ore',
-				minute: 'minuto',
-				minutes: 'minuti',
-				second: 'secondo',
-				seconds: 'secondi'
+				week: w,
+				weeks: ws,
+				day: d,
+				days: ds,
+				hour: h,
+				hours: hs,
+				minute: m,
+				minutes: ms,
+				second: s,
+				seconds: ss
 			},
 			enableUtc: false
 		});
