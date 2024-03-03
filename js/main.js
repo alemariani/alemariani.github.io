@@ -215,7 +215,7 @@
 
 	// Init Counter
 	var initCounter = function() {
-		var d = new Date(2024, 4, 31, 16, 30);
+		var d = new Date(2024, 4, 31, 15, 0);
 		simplyCountdown('.simply-countdown-one', {
 			year: d.getFullYear(),
 			month: d.getMonth() + 1,
